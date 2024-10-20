@@ -52,3 +52,5 @@ EnchantedPaper includes optimisations from both
 EnchantedPaper uses PaperMC's paperweight framework found
 [here](https://github.com/PaperMC/paperweight).
 
+# Test
+
