@@ -7,7 +7,7 @@ jobs:
       - name: Checkout Git Repository
         uses: actions/checkout@v2
       - name: Set up JDK
-        uses: actions/setup-java@v2.5.0
+        uses: actions/setup-java@v4.4.0
         with:
           java-version: '17'
           cache: 'gradle'
@@ -19,12 +19,12 @@ jobs:
       - name: Build Paperclip jar
         run: ./gradlew shadowjar createReobfPaperclipJar --stacktrace
       - name: Upload Paperclip jar
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: enchantedpaper.jar
           path: build/libs/enchantedpaper-paperclip-*-reobf.jar
       - name: Upload EnchantedPaper-Master jar
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: enchantedpaper-master.jar
           path: EnchantedPaper-Master/build/libs/enchantedpaper-master*.jar
